@@ -167,20 +167,13 @@
     </div>
 </div>
 </div>
-<choose>
-    <when test="${sessionScope.jwtResponse eq null}">
-        <script>
-            $(document).ready(function() {
-                $('.btn-buy-ticket-not-signed-in').on('click', function () {
-                    $('#modalLoginForm').modal('show');
-                })
-                 $('#close').on('click',function(){
-                   $('#modalLoginForm').modal({ show: false});
-                 })
-            })
-        </script>
-    </when>
-</choose>
+<script>
+    document.getElementById('buyTicketBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        alert('Bạn đã nhấn nút Mua Vé!');
+        window.location.href = this.href;
+    });
+</script>
 </body>
 
 </html>
