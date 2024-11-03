@@ -21,6 +21,7 @@
     </style>
 </head>
 <body>
+<div id="wrapper">
 <div id="header">
     <a href="" class="logo">
         <img src="assets/logo.png" alt="">
@@ -61,12 +62,7 @@
             <img src="${movie.smallImageURl}" alt="">
             <!--class btn-buy-ticket-not-signed-in để chọn cái form đăng nhập-->
             <choose>
-                <when test="${sessionScope.jwtResponse eq null}">
-                    <button  class="btn btn-danger btn-block btn-buy-ticket-not-signed-in">Mua vé</button>
-                </when>
-                <otherwise>
-                    <a href="schedule.html?movieId=${movie.id}" class="btn btn-danger btn-block">Mua Vé</a>
-                </otherwise>
+                    <a href="schedule.html?movieId=${movie.id}" class="btn btn-primary btn-block">Mua Vé</a>
             </choose>
         </div>
         <table>
@@ -170,7 +166,7 @@
         </form>
     </div>
 </div>
-
+</div>
 <choose>
     <when test="${sessionScope.jwtResponse eq null}">
         <script>
