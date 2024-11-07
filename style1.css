@@ -18,7 +18,7 @@
     size: 100px;
     align-items: center;
 }
-#menu .item:hover {
+#menu .item:cam {
     background-color:orange;
 }
 #menu .item {
@@ -57,11 +57,11 @@
    5px;
     cursor: pointer;
 }
-#search form button :hover {
+#search form button :cam {
     background-color: orange;
 }
 
-#search form  :hover {
+#search form  :cam {
     background-color:aliceblue;
 }
 #footer {
